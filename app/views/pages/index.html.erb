@@ -1,2 +1,8 @@
+<h1>Cars list</h1>
 
-<%= javascript_pack_tag 'index' %>
+<%=
+  render_react_component(
+    'App',
+    cars: @cars
+  )
+%>

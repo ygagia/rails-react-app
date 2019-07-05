@@ -1,8 +1,18 @@
 <h1>Admin Panel</h1>
+
+<%= link_to 'Add New Car', new_admin_car_path %>
+
 <h3>All Cars</h3>
 
-<ul>
+<table>
   <% @cars.each do |car| %>
-    <li><%= car.model %></li>
+    <tr>
+      <td><%= car.model %></td>
+      <td><%= link_to 'Show', admin_car_path(car) %></td>
+      <td><%= link_to 'Edit', edit_admin_car_path(car) %></td>
+      <td><%= link_to 'Delete', admin_car_path(car),
+                method: :delete,
+                data: { confirm: 'Are you sure?' } %></td>
+    </tr>
   <% end %>
-</ul>
+</table>
