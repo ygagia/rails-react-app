@@ -1,0 +1,89 @@
+{
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "sourceType": "module",
+    "allowImportExportEverywhere": true,
+    "ecmaFeatures": {
+      "jsx": true
+    },
+  },
+  "env": {
+    "browser": true,
+    "commonjs": true,
+    "es6": true
+  },
+  "extends": "airbnb",
+  "plugins": [
+    "react-hooks"
+  ],
+  "rules": {
+    "no-restricted-imports": ["error", "import1", "import2"],
+    "arrow-parens": ["error", "always"],
+    "class-methods-use-this": ["off"],
+    "comma-dangle": ["error", "never"],
+    "curly": ["error"],
+    "function-paren-newline": ["error", "consistent"],
+    "global-require": ["off"],
+    "import/extensions": ["off"],
+    "import/no-extraneous-dependencies": ["off"],
+    "import/no-unresolved": ["off"],
+    "import/prefer-default-export": ["off"],
+    "jsx-a11y/anchor-has-content": ["off"],
+    "jsx-a11y/anchor-is-valid": ["off"],
+    "jsx-a11y/click-events-have-key-events": ["off"],
+    "jsx-a11y/label-has-for": ["off"],
+    "jsx-a11y/no-static-element-interactions": ["off"],
+    "no-lonely-if": ["warn"],
+    "no-multi-assign": ["off"],
+    "no-new": ["off"],
+    "no-param-reassign": ["warn"],
+    "no-plusplus": ["error", { "allowForLoopAfterthoughts": true }],
+    "no-script-url": ["off"],
+    "no-underscore-dangle": ["off"],
+    "object-curly-newline": ["off"],
+    "object-shorthand": ["off"],
+    "one-var": ["off"],
+    "one-var-declaration-per-line": ["error", "initializations"],
+    "prefer-const": ["warn"],
+    "react/no-did-update-set-state" : ["warn"],
+    "react/no-unused-prop-types": ["warn"],
+    "react/prefer-stateless-function": ["off"],
+    "react/no-did-mount-set-state": ["off"],
+    "react/prop-types": ["warn"],
+    "react-hooks/rules-of-hooks": ["error"],
+    "react-hooks/exhaustive-deps": ["warn"],
+    "space-before-function-paren": ["error", "never"]
+  },
+  "globals": {
+    "$": true,
+    "__": true,
+    "__insp": true,
+    "ga": true,
+    "google" : true,
+    "googletag": true,
+    "Handlebars": true,
+    "n__": true,
+    "s__": true,
+    "SKR": true,
+    "SKR_Profile": true
+  },
+  "overrides": [
+    {
+      "files": [ "spec/**/*.js?(x)"],
+      "rules": {
+        "func-names": ["off"],
+        "no-unused-expressions": ["off"],
+        "prefer-arrow-callback": ["off"]
+      },
+      "env" : {
+        "mocha": true
+      },
+      "globals": {
+        "expect": true,
+        "fixture": true,
+        "sinon": true,
+        "HasEvent": true
+      }
+    }
+  ]
+}
