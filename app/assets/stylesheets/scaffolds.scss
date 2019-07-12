@@ -7,6 +7,11 @@ body {
   line-height: 18px;
 }
 
+header {
+  background: #b2dfdb;
+  padding: 20px;
+}
+
 p, ol, ul, td {
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
@@ -32,8 +37,15 @@ a {
   }
 }
 
+table {
+  width: 100%;
+  background: #eeeeee;
+  padding: 20px;
+}
+
 th {
   padding-bottom: 5px;
+  border-bottom: 1px solid grey;
 }
 
 td {
