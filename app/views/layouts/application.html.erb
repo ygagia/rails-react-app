@@ -6,8 +6,7 @@
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_pack_tag 'application' %>
-    <%= javascript_pack_tag 'react-hypernova' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
@@ -16,4 +15,6 @@
 
     <%= yield %>
   </body>
+
+  <%= javascript_pack_tag 'react-hypernova', 'data-turbolinks-track': 'reload' %>
 </html>
