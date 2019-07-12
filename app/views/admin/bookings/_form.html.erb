@@ -23,12 +23,12 @@
 
   <div class="field">
     <%= form.label :pickup_location %>
-    <%= form.text_field :pickup_location %>
+    <%= form.select :pickup_location, options_for_select([ "Office", "Port", "Airport"], selected: booking.pickup_location) %>
   </div>
 
   <div class="field">
     <%= form.label :dropoff_location %>
-    <%= form.text_field :dropoff_location %>
+    <%= form.select :dropoff_location, options_for_select([ "Office", "Port", "Airport"], selected: booking.dropoff_location) %>
   </div>
 
   <div class="field">
