@@ -20,7 +20,7 @@
         <td><%= readable_time(booking.end_time) %></td>
         <td><%= booking.pickup_location %></td>
         <td><%= booking.dropoff_location %></td>
-        <td><%= booking.user.email %></td>
+        <td><%= booking.user.display_name %></td>
         <td><%= booking.car.model %></td>
         <td><%= link_to 'Show', admin_booking_path(booking) %></td>
         <td><%= link_to 'Edit', edit_admin_booking_path(booking) %></td>

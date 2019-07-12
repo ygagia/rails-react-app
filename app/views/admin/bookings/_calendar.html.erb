@@ -2,7 +2,7 @@
   <%= date %>
   <% bookings.each do |booking| %>
     <div class="event">
-      <%= link_to "#{booking.user.email} - #{booking.car.model}", admin_booking_path(booking) %>
+      <%= link_to "#{booking.user.display_name} - #{booking.car.model}", admin_booking_path(booking) %>
     </div>
   <% end %>
 <% end %>

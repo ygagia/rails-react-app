@@ -5,4 +5,8 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_many :bookings, dependent: :destroy
+
+  def display_name
+    "#{first_name} #{last_name}"
+  end
 end
