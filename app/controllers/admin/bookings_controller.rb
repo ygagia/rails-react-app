@@ -25,6 +25,7 @@ class Admin::BookingsController < Admin::BaseController
   # POST /bookings.json
   def create
     @booking = Booking.new(booking_params)
+    @booking.user_id = current_user.id
 
     respond_to do |format|
       if @booking.save

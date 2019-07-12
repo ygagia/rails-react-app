@@ -19,7 +19,7 @@ class Admin::CarsController < Admin::BaseController
     @car = Car.new(car_params)
 
     if  @car.save
-      redirect_to admin_car_path(@car)
+      redirect_to admin_car_path(@car), notice: 'Car was successfully created.'
     else
       render 'new'
     end
@@ -29,7 +29,7 @@ class Admin::CarsController < Admin::BaseController
     @car = Car.find(params[:id])
 
     if @car.update(car_params)
-      redirect_to admin_car_path(@car)
+      redirect_to admin_car_path(@car), notice: 'Car was successfully updated.'
     else
       render 'edit'
     end
@@ -39,7 +39,7 @@ class Admin::CarsController < Admin::BaseController
     @car = Car.find(params[:id])
     @car.destroy
 
-    redirect_to admin_cars_path
+    redirect_to admin_cars_path, notice: 'Car was successfully deleted.'
   end
 
   private
