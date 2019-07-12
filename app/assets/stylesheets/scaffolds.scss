@@ -58,8 +58,16 @@ div {
   }
 }
 
-#notice {
-  color: green;
+.notice {
+  background: green;
+  padding: 10px;
+  color: white;
+}
+
+.alert {
+  background: red;
+  padding: 10px;
+  color: white;
 }
 
 .field_with_errors {
