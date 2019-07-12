@@ -14,5 +14,10 @@
   },
   "devDependencies": {
     "webpack-dev-server": "^3.7.2"
+  },
+  "scripts": {
+    "wds": "bin/webpack-dev-server",
+    "webpack-ssr": "webpack --config config/webpack/server.js --watch",
+    "hypernova": "node script/hypernova.js"
   }
 }
