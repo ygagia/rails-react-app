@@ -1,0 +1,8 @@
+<%= month_calendar events: @bookings do |date, bookings| %>
+  <%= date %>
+  <% bookings.each do |booking| %>
+    <div class="event">
+      <%= link_to "#{booking.user.email} - #{booking.car.model}", admin_booking_path(booking) %>
+    </div>
+  <% end %>
+<% end %>

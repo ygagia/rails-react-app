@@ -13,12 +13,12 @@
 
   <div class="field">
     <%= form.label :start_time %>
-    <%= form.datetime_select :start_time %>
+    <%= form.datetime_select :start_time, { start_day: Date.today, start_year: Date.today.year, minute_step: 15 } %>
   </div>
 
   <div class="field">
     <%= form.label :end_time %>
-    <%= form.datetime_select :end_time %>
+    <%= form.datetime_select :end_time, { start_day: Date.today, start_year: Date.today.year, minute_step: 15 } %>
   </div>
 
   <div class="field">
@@ -32,13 +32,8 @@
   </div>
 
   <div class="field">
-    <%= form.label :user_id %>
-    <%= form.text_field :user_id %>
-  </div>
-
-  <div class="field">
-    <%= form.label :car_id %>
-    <%= form.text_field :car_id %>
+    <%= form.label :car_id -%>
+    <%= collection_select(:booking, :car_id, Car.all, :id, :model, prompt: 'Please select a car') -%>
   </div>
 
   <div class="actions">

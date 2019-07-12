@@ -1,11 +1,11 @@
 <p>
   <strong>Start time:</strong>
-  <%= @booking.start_time %>
+  <%= readable_time(@booking.start_time) %>
 </p>
 
 <p>
   <strong>End time:</strong>
-  <%= @booking.end_time %>
+  <%= readable_time(@booking.end_time) %>
 </p>
 
 <p>
@@ -20,12 +20,12 @@
 
 <p>
   <strong>User:</strong>
-  <%= @booking.user %>
+  <%= @booking.user.email %>
 </p>
 
 <p>
   <strong>Car:</strong>
-  <%= @booking.car %>
+  <%= @booking.car.model %>
 </p>
 
 <%= link_to 'Edit', edit_admin_booking_path(@booking) %> |

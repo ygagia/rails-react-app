@@ -16,8 +16,8 @@
   <tbody>
     <% @bookings.each do |booking| %>
       <tr>
-        <td><%= booking.start_time %></td>
-        <td><%= booking.end_time %></td>
+        <td><%= readable_time(booking.start_time) %></td>
+        <td><%= readable_time(booking.end_time) %></td>
         <td><%= booking.pickup_location %></td>
         <td><%= booking.dropoff_location %></td>
         <td><%= booking.user.email %></td>
@@ -33,3 +33,7 @@
 <br>
 
 <%= link_to 'New Booking', new_admin_booking_path %>
+
+<br><br>
+
+<%= render 'calendar' %>
