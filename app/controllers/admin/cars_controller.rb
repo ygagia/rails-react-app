@@ -45,6 +45,6 @@ class Admin::CarsController < Admin::BaseController
   private
 
   def car_params
-    params.require(:car).permit(:model)
+    params.require(:car).permit(:model, :manufacturer_id, :car_group_id)
   end
 end

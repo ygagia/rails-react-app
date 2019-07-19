@@ -7,5 +7,6 @@ Rails.application.routes.draw do
     resources :cars
     resources :bookings
     resources :manufacturers
+    resources :car_groups
   end
 end

@@ -14,10 +14,20 @@
     </div>
   <% end %>
 
-  <p>
+  <div class="field">
     <%= form.label :model %><br>
     <%= form.text_field :model %>
-  </p>
+  </div>
+
+  <div class="field">
+    <%= form.label :manufacturer_id %>
+    <%= collection_select(:car, :manufacturer_id, Manufacturer.all, :id, :name, prompt: 'Please select a car manufacturer') %>
+  </div>
+
+  <div class="field">
+    <%= form.label :car_group_id %>
+    <%= collection_select(:car, :car_group_id, CarGroup.all, :id, :name, prompt: 'Please select a car group') %>
+  </div>
 
   <p>
     <%= form.submit %>

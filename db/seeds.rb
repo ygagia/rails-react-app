@@ -11,3 +11,9 @@
      model: FFaker::Vehicle.model
    )
 end
+
+10.times do
+  Manufacturer.create(
+     name: FFaker::Vehicle.make
+   )
+end

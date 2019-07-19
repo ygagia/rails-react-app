@@ -23,17 +23,19 @@
 
   <div class="field">
     <%= form.label :pickup_location %>
-    <%= form.select :pickup_location, options_for_select([ "Office", "Port", "Airport"], selected: booking.pickup_location) %>
+    <%= form.select :pickup_location, options_for_select([ "Office", "Port", "Airport"]),
+          prompt: 'Please select a pickup location' %>
   </div>
 
   <div class="field">
     <%= form.label :dropoff_location %>
-    <%= form.select :dropoff_location, options_for_select([ "Office", "Port", "Airport"], selected: booking.dropoff_location) %>
+    <%= form.select :dropoff_location, options_for_select([ "Office", "Port", "Airport"]),
+          prompt: 'Please select a dropoff location' %>
   </div>
 
   <div class="field">
-    <%= form.label :car_id -%>
-    <%= collection_select(:booking, :car_id, Car.all, :id, :model, prompt: 'Please select a car') -%>
+    <%= form.label :car_id %>
+    <%= collection_select(:booking, :car_id, Car.all, :id, :model, prompt: 'Please select a car') %>
   </div>
 
   <div class="actions">
