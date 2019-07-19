@@ -1,0 +1,26 @@
+<%= form_for [:admin, @manufacturer], local: true do |form| %>
+
+  <% if @manufacturer.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= pluralize(@manufacturer.errors.count, "error") %> prohibited
+        this manufacturer from being saved:
+      </h2>
+      <ul>
+        <% @manufacturer.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <p>
+    <%= form.label :name %><br>
+    <%= form.text_field :name %>
+  </p>
+
+  <p>
+    <%= form.submit %>
+  </p>
+
+<% end %>
