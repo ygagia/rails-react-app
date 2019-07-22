@@ -15,4 +15,14 @@
       <%= link_to 'Sign out',  destroy_user_session_path, method: :delete %>
     </p>
   <% end %>
+
+  <nav>
+    <ul>
+      <li><a href="<%= admin_dashboard_path %>">Dashboard</a></li>
+      <li><a href="<%= admin_bookings_path %>">Bookings</a></li>
+      <li><a href="<%= admin_cars_path %>">Cars</a></li>
+      <li><a href="<%= admin_manufacturers_path %>">Car Manufacturers</a></li>
+      <li><a href="<%= admin_car_groups_path %>">Car Groups</a></li>
+    </ul>
+  </nav>
 </header>
