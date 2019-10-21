@@ -38,7 +38,7 @@ gem 'jbuilder', '~> 2.5'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
 gem 'hypernova', '~> 1.4'
-gem 'devise', '~> 4.6'
+gem 'devise', '~> 4.7'
 gem 'simple_calendar', '~> 2.0'
 
 group :development, :test do
